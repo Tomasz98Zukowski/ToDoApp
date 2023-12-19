@@ -11,9 +11,6 @@
             Console.WriteLine(list.Max());
             list.Sort();
             list2.Sort();
-
-
-
         }
     }
 }
