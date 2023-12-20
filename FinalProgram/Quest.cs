@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FinalProgram
 {
-    internal class Quest
+    public class Quest
     {
-        private int Id {  get; set; }
+        public int Id {  get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         private QuestStatus Status { get; set; }

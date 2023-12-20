@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinalProgram
 {
-    internal class QuestStatus
+    internal enum QuestStatus
     {
+        New,
+        InProgress,
+        Complete,
     }
+    
 }
