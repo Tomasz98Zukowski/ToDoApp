@@ -28,7 +28,17 @@ namespace lesson23
                 }
             }
 
+            static void SetTwoRef(ref int i)
+            {
+                i = 2;
+            }
             
+            static void SetTwoOut(out int i)
+            {
+                i = 2;
+            }
+
+            int number = 0;
 
 
         }
