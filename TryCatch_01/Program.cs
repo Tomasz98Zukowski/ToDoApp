@@ -8,6 +8,10 @@
             {
                 ThrowException(0);
             }
+            catch(ArgumentNullException exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
             catch (InvalidOperationException exception)
             {
                 Console.WriteLine(exception.Message);
