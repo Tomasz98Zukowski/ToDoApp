@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            
+
 
             static List<Menu> CreateMenus()
             {
@@ -108,7 +108,8 @@
                     default:
                         Console.WriteLine("Entered invalid Key");
                         break;
-                
+
+                }
             }
         }
     }

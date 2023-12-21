@@ -12,8 +12,8 @@ namespace FinalProgram
         public string Title { get; set; }
         public string Description { get; set; }
         public QuestStatus Status { get; set; }
-        private DateTime Created { get; set; }
-        private DateTime? Modified { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime? Modified { get; set; }
 
         public override string ToString()
         {
