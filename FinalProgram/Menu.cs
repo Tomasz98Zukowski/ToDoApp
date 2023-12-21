@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FinalProgram
 {
-    internal class Menu
+    public class Menu
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public override string ToString()
         {

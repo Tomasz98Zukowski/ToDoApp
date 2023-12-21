@@ -11,7 +11,7 @@ namespace FinalProgram
         public int Id {  get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        private QuestStatus Status { get; set; }
+        public QuestStatus Status { get; set; }
         private DateTime Created { get; set; }
         private DateTime? Modified { get; set; }
 

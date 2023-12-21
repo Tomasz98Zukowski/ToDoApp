@@ -8,7 +8,7 @@ namespace FinalProgram
 {
     public class MenuService
     {
-        private readonly IEnumerable<Menu> _menus;
+        public readonly IEnumerable<Menu> _menus;
         public MenuService(IEnumerable<Menu> menus)
         {
             _menus = menus;
@@ -17,7 +17,7 @@ namespace FinalProgram
 
         public Menu? GetMenuById(int  id)
         {
-            foreach (var menu in _menus)
+            foreach (Menu menu in _menus)
             {
                 if(menu.Id == id)
                 {
