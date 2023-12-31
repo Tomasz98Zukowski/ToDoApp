@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TodoApp.Core.Entities;
+using ToDoApp.Core.Repositories;
+using ToDoApp.Core.Services;
 
-namespace FinalProgram
+namespace TodoApp.Core.Services
 {
-    public class QuestService
+    internal sealed class QuestService : IQuestService
     {
-        private readonly List<Quest> _quests = new List<Quest>();
-
-        private int GetLastID()
+        private readonly IRepository<QuestDto> _repository;
+        public QuestService(IRepository<QuestDto> repository)
         {
-            if (_quests.Count == 0)
-            {
-                return 0;
-            }
-            return _quests[_quests.Count - 1].Id;
+            _repository = repository;
         }
-        public Quest AddQuest (Quest quest)
+
+        
+        public QuestDto AddQuest (QuestDto quest)
         {
             var id = GetLastID();
             quest.Id = id+1;
@@ -26,12 +26,12 @@ namespace FinalProgram
             return quest;
         }
 
-        public Quest UpdateQuest(Quest quest)
+        public QuestDto UpdateQuest(QuestDto quest)
         {
             return quest;
         }
         
-        public bool DeleteQuest (int id)
+        public void DeleteQuest (int id)
         {
             var quest = GetQuestById(id);
             if (quest != null)
@@ -42,7 +42,7 @@ namespace FinalProgram
             return true;
         }
 
-        public Quest? GetQuestById(int id)
+        public QuestDto? GetQuestById(int id)
         {
             foreach (var quest in _quests)
             {
@@ -53,7 +53,7 @@ namespace FinalProgram
             }
             return null;
         }
-        public IReadOnlyList<Quest> GetAllQuests()
+        public IReadOnlyList<QuestDto> GetAllQuests()
         {
             return _quests;
         }

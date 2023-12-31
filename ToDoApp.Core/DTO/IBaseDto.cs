@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProgram
+namespace ToDoApp.Core.DTO
 {
-    public enum QuestStatus
+    public interface IBaseDto
     {
-        New,
-        InProgress,
-        Complete,
     }
-    
 }

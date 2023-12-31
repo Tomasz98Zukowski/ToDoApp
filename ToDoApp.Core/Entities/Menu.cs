@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProgram
+namespace TodoApp.Core.Entities
 {
     public class Menu
     {

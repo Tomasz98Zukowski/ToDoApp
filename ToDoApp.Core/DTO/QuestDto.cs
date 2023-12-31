@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TodoApp.Core.Entities;
 
-namespace FinalProgram
+namespace ToDoApp.Core.DTO
 {
-    public class Quest
+    public class QuestDto : IBaseDto
     {
-        public int Id {  get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public QuestStatus Status { get; set; }
+        public string Status2 { get; set; } = QuestStatus.New.ToString();
         public DateTime Created { get; set; }
         public DateTime? Modified { get; set; }
-
-        public override string ToString()
-        {
-            return $"Title: {Title} Description:{Description} Status:{Status} ";
-        }
     }
 }
