@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TodoApp.Core.Entities;
+using ToDoApp.Core.DTO;
 using ToDoApp.Core.Repositories;
 using ToDoApp.Core.Services;
 
