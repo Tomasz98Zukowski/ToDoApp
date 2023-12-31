@@ -17,11 +17,11 @@ namespace TodoApp.Core.Entities
         public DateTime Created { get;private set; }
         public DateTime? Modified { get;private set; }
 
-        public Quest(int id, string title, string description, QuestStatus status, DateTime created, DateTime? modifed = null)
+        public Quest(int id, string title, string description, string status, DateTime created, DateTime? modifed = null)
         {
             Id = id;
             ChangeTitle(title);
-            ChangeDescritpion(description);
+            ChangeDescription(description);
             ChangeStatus(status);
             Created = created;
             Modified = modifed;
@@ -31,7 +31,7 @@ namespace TodoApp.Core.Entities
         {
             Id = id;
             ChangeTitle(title);
-            ChangeDescritpion(description);
+            ChangeDescription(description);
             Status = status;
             Created = created;
             Modified = modifed;
